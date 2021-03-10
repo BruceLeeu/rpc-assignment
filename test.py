@@ -1,4 +1,4 @@
-import zlib
+import zlib, base64
 import sys
 
 
@@ -19,13 +19,13 @@ print(sq_odd(my_list))
 def gen_dictionary(strings):
     strings_dictionary = {}
     for string in strings:
-        strings_dictionary[string] = zlib.compress(string.encode())
+        strings_dictionary[string] = base64.b64encode(zlib.compress(string.encode())).decode()
     return strings_dictionary
 
 
 my_strings = [
-    "louis", "la", "Grange", "works", "very", "hard",
-    "LOoooooooooooooooooooooooooooooooooongs striiiiiiiiiiiiiiiinnnnnngggggggggggggg"
+    'louis', 'la', 'Grange', 'works', 'very', 'hard',
+    'LOoooooooooooooooooooooooooooooooooongs striiiiiiiiiiiiiiiinnnnnngggggggggggggg'
 ]
 
 print(gen_dictionary(my_strings))
@@ -33,11 +33,12 @@ print(gen_dictionary(my_strings))
 
 def decode_string(string):
     # print("\nsize of compressed text", sys.getsizeof(string))
-    decoded_string = zlib.decompress(string).decode()
+    # decoded_string = zlib.decompress(string).decode()
     # print("\nsize of original text", sys.getsizeof(decoded_string))
+    decoded_string = zlib.decompress(base64.b64decode(string)).decode()
     return decoded_string
 
 
-my_string = b"x\x9c\xf3\xf1\xcf'\x08\xf2\xd2\x8b\x15\x8aK\x8a2\xd1@\x1e\x18\xa4\xa3\x00\x00,n \xe1"
+my_string = 'eJzz8c8nCPLSixWKS4oy0UAeGKSjAAAsbiDh'
 
 print(decode_string(my_string))
