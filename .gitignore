@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-# Only exists if Bazel was run
+__pycache__/*
+
 # dependencies
 
 # profiling files
@@ -17,6 +18,7 @@
 .history/*
 
 # misc
+testfiles/*
 
 # System Files
 .DS_Store

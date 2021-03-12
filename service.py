@@ -3,6 +3,7 @@
 from nameko.rpc import rpc, RpcProxy
 import zlib, base64
 
+
 class RpcAssignment:
     name = "rpc_assignment_service"
 
@@ -20,11 +21,11 @@ class RpcAssignment:
     def gen_dictionary(self, strings):
         strings_dictionary = {}
         for string in strings:
-            strings_dictionary[string] = base64.b64encode(zlib.compress(string.encode())).decode()
+            strings_dictionary[string] = base64.b64encode(
+                zlib.compress(string.encode())).decode()
         return strings_dictionary
 
     @rpc
     def decode_string(self, string):
         decoded_string = zlib.decompress(base64.b64decode(string)).decode()
         return decoded_string
-    
