@@ -77,7 +77,7 @@ The third function ```decode_string()``` accepts a single string as input and us
 ### Coding the functions in Python
 
 The creation of the service.py file - which contains all the outlined functions - was a relatively straightforward task, since the documentation of creating services in nameko was well documented, and because Python is a simple language to use and implement. 
-_Total Time taken: ~2 hours_
+_Total Time taken: ~3 hours_
 
 ### Testing the functions using nameko shell
 
@@ -95,11 +95,9 @@ My documentation - such as commenting, pushing git commits, and annotating requi
 **This excludes the report (debrief) on my experience and thoughts of this assignment, which took about ~3 hours in total.
 
 ### Grand Total time taken
-~ 14 Hours (50 - 65% research)
+~ 15 Hours (50 - 65% research)
 Note: This time does not include any breaks taken, communications to the company, and other miscellaneous activities (such as setting up my development environment, downloading large files, and waiting for large compilations/builds to complete)
 
-
-
-
+![Thanks Gif](https://media3.giphy.com/media/e7QoUmjplkXzGUDWzF/giphy.gif)
 
 ♡ Louis la Grange © 2021
