@@ -1,7 +1,7 @@
 # RPC Service using nameko
 
 # import nameko framework and required dependencies
-from nameko.rpc import rpc, RpcProxy
+from nameko.rpc import rpc
 import zlib, base64
 
 
